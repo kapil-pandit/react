@@ -1,0 +1,28 @@
+
+@mixin responsive($device) {
+    @if ($device == "xs") {
+      @media (max-width: 480px) {
+        @content;
+      }
+    }
+    @if ($device == "sm") {
+      @media (min-width: 481px) and (max-width: 767px) {
+        @content;
+      }
+    }
+    @if ($device == "md") {
+      @media (min-width: 768px) and (max-width: 1023px) {
+        @content;
+      }
+    }
+    @if ($device == "lg") {
+      @media (min-width: 1024px) and (max-width: 1200px) {
+        @content;
+      }
+    }
+    @if ($device == "xl") {
+      @media (min-width: 1201px) {
+        @content;
+      }
+    }
+  }
